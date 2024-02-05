@@ -1,0 +1,6 @@
+*.json
+*.md
+.prettierrc
+node_modules
+.eslintrc.cjs
+*.config.js

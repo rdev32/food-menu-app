@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: 'Billion Dreams';
+  src: url(/BillionDreams.ttf);
+}
+@font-face {
+  font-family: 'Bold Lining';
+  src: url(/BoldLining.ttf);
+}
+@font-face {
+  font-family: 'Crafter';
+  src: url(/CrafterRegular.otf);
+}
+@font-face {
+  font-family: 'Sophia';
+  src: url(/Sophia.ttf);
+}
+@font-face {
+  font-family: 'Wild Hazelnut';
+  src: url(/WildHazelnut.ttf);
+}
+
+@tailwind utilities;
