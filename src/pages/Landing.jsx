@@ -74,8 +74,8 @@ const Landing = () => {
               </p>
             </div>
             <div className="flex w-full items-center justify-between gap-12 align-middle max-sm:w-[80%] max-sm:flex-col max-sm:gap-5">
-              <AnchorButton url="/login">Entrar</AnchorButton>
-              <AnchorButton url="/register">Conocer mas</AnchorButton>
+              <AnchorButton url="/signin">Entrar</AnchorButton>
+              <AnchorButton url="/signup">Conocer mas</AnchorButton>
             </div>
             {/*
             <div className="fixed bottom-4 sm:w-auto lg:w-full">
