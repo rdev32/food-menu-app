@@ -9,7 +9,7 @@ const Landing = () => {
       const container = containerRef.current
       if (!container) return
 
-      const velocity = 50
+      const velocity = 80
 
       const mouse = {
         x: e.pageX - container.offsetLeft,
@@ -29,20 +29,27 @@ const Landing = () => {
       container.style.transition = 'background-position 0.5s ease'
       container.style.backgroundPosition = `${position.x}% ${position.y}%`
     }
+    
+    const handleMouseOut = () => {
+      container.style.transition = 'background-position 0.5s ease'
+      container.style.backgroundPosition = 'center'
+    }
 
     const container = containerRef.current
     if (!container) return
 
     container.addEventListener('mousemove', handleMouseMove)
+    container.addEventListener('mouseout', handleMouseOut)
 
     return () => {
       container.removeEventListener('mousemove', handleMouseMove)
+      container.removeEventListener('mouseout', handleMouseOut)
     }
   }, [containerRef])
 
   return (
     <div
-      className="h-dvh overflow-hidden bg-[url('./src/assets/landing.jpg')] bg-cover bg-fixed bg-center bg-no-repeat text-gray-300"
+      className="h-dvh overflow-hidden bg-[url('./src/assets/landing.jpg')] bg-fixed bg-center bg-no-repeat text-gray-300"
       ref={containerRef}
     >
       <div className="h-full w-full bg-[#000000aa]">
